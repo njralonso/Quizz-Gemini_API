@@ -1,5 +1,9 @@
-export default function Button() {	
+type ButtonProps = {
+	onClick?: () => void;
+}
+
+export default function Button({ onClick }: ButtonProps) {
 	return (
-		<button className="py-2 px-4 bg-blue-500 text-white rounded">START</button>
+		<button onClick={onClick} className="py-2 px-4 bg-blue-500 text-white rounded">START</button>
 	)
 }
